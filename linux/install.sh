@@ -16,8 +16,11 @@ sudo pacman -S --needed \
   ttf-firacode-nerd \
   unzip
 
-# Install additional packages using paru
-paru -S --needed zen-browser-bin
+# Install AUR packages
+paru -S --needed ani-cli zen-browser-bin
+
+# Install Node.js packages
+sudo npm i -g bun neovim
 
 # Git configuration
 

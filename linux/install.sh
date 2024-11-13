@@ -10,6 +10,7 @@ sudo pacman -S --needed \
   github-cli \
   interception-caps2esc \
   lazygit \
+  less \
   neovide \
   npm \
   telegram-desktop \

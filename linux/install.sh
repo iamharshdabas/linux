@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+cd ~ || exit
+
 # Update system
-paru
+yay
 
 # Install necessary packages
 sudo pacman -S --needed \
@@ -18,10 +20,7 @@ sudo pacman -S --needed \
   unzip
 
 # Install AUR packages
-paru -S --needed ani-cli zen-browser-bin
-
-# Install Node.js packages
-sudo npm i -g bun neovim
+yay -S --needed ani-cli bun-bin
 
 # Git configuration
 

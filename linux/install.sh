@@ -20,7 +20,7 @@ sudo pacman -S --needed \
   unzip
 
 # Install AUR packages
-yay -S --needed ani-cli bun-bin hyprshade
+yay -S --needed ani-cli bun-bin hyprshade zen-browser-bin
 
 # Git configuration
 

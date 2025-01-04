@@ -48,7 +48,7 @@ git config --global init.defaultBranch main
 ln -s ~/Repos/nvim/ ~/.config/nvim
 
 ## Copy kitty configuration files
-rm -f ~/.config/kitty/kitty.conf
+rm -f ~/.config/kitty/userprefs.conf
 cp Repos/stuff/linux/kitty/* ~/.config/kitty/
 
 ## Copy hypr configuration files

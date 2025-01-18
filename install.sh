@@ -7,6 +7,7 @@ yay
 
 # Install necessary packages
 sudo pacman -S --needed \
+  easyeffects \
   fd \
   fzf \
   github-cli \

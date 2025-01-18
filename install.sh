@@ -49,13 +49,13 @@ ln -s ~/Repos/nvim/ ~/.config/nvim
 
 ## Copy kitty configuration files
 rm -f ~/.config/kitty/userprefs.conf
-cp Repos/stuff/linux/kitty/* ~/.config/kitty/
+cp Repos/linux/kitty/* ~/.config/kitty/
 
 ## Copy hypr configuration files
 rm -f ~/.config/hypr/keybindings.conf ~/.config/hypr/monitors.conf ~/.config/hypr/userprefs.conf
-cp Repos/stuff/linux/hypr/* ~/.config/hypr/
+cp Repos/linux/hypr/* ~/.config/hypr/
 
 ## Setup caps2esc
-sudo cp Repos/stuff/linux/caps2esc/udevmon.yaml /etc/
-sudo cp Repos/stuff/linux/caps2esc/udevmon.service /etc/systemd/system/
+sudo cp Repos/linux/caps2esc/udevmon.yaml /etc/
+sudo cp Repos/linux/caps2esc/udevmon.service /etc/systemd/system/
 sudo systemctl enable --now udevmon.service

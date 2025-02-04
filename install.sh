@@ -42,6 +42,7 @@ git config --global user.email "iamharshdabas@gmail.com"
 git config --global user.name "Harsh Dabas"
 git config --global core.editor "nvim"
 git config --global init.defaultBranch main
+git config --global pull.rebase true
 
 # Setup configuration files
 

@@ -32,8 +32,8 @@ gh auth login
 gh auth refresh -s read:project
 
 ## Clone all repositories from GitHub user
-mkdir -p Repos
-cd Repos || exit
+mkdir -p Repos/iamharshdabas
+cd Repos/iamharshdabas || exit
 gh repo list iamharshdabas --json nameWithOwner --jq '.[].nameWithOwner' | xargs -I {} gh repo clone {}
 cd ~ || exit
 
@@ -47,17 +47,17 @@ git config --global pull.rebase true
 # Setup configuration files
 
 ## Create symlink for nvim configuration
-ln -s ~/Repos/nvim/ ~/.config/nvim
+ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 
 ## Copy kitty configuration files
 rm -f ~/.config/kitty/userprefs.conf
-cp Repos/linux/kitty/* ~/.config/kitty/
+cp Repos/iamharshdabas/linux/kitty/* ~/.config/kitty/
 
 ## Copy hypr configuration files
 rm -f ~/.config/hypr/keybindings.conf ~/.config/hypr/monitors.conf ~/.config/hypr/userprefs.conf
-cp Repos/linux/hypr/* ~/.config/hypr/
+cp Repos/iamharshdabas/linux/hypr/* ~/.config/hypr/
 
 ## Setup caps2esc
-sudo cp Repos/linux/caps2esc/udevmon.yaml /etc/
-sudo cp Repos/linux/caps2esc/udevmon.service /etc/systemd/system/
+sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
+sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
 sudo systemctl enable --now udevmon.service

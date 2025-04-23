@@ -14,14 +14,12 @@ sudo pacman -S --needed \
   interception-caps2esc \
   lazygit \
   less \
-  neovide \
   npm \
   telegram-desktop \
-  ttf-firacode-nerd \
   unzip
 
 # Install AUR packages
-yay -S --needed ani-cli bun-bin hyprshade zen-browser-bin
+yay -S --needed ani-cli bun-bin zen-browser-bin
 
 # Git configuration
 

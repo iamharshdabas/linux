@@ -49,14 +49,6 @@ git config --global pull.rebase true
 ## Create symlink for nvim configuration
 ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 
-## Copy kitty configuration files
-rm -f ~/.config/kitty/userprefs.conf
-cp Repos/iamharshdabas/linux/kitty/* ~/.config/kitty/
-
-## Copy hypr configuration files
-rm -f ~/.config/hypr/keybindings.conf ~/.config/hypr/monitors.conf ~/.config/hypr/userprefs.conf
-cp Repos/iamharshdabas/linux/hypr/* ~/.config/hypr/
-
 ## Setup caps2esc
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/

@@ -6,7 +6,7 @@ cd ~ || exit
 yay
 
 # Install necessary packages
-pacman -S \
+sudo pacman -S \
   easyeffects \
   fd \
   fzf \
@@ -48,18 +48,18 @@ git config --global pull.rebase true
 ## Create symlink for nvim configuration
 ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 
-rm ~/.config/hyde/config.toml
-cp -r ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/
-
 ## Setup caps2esc
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
 sudo systemctl enable --now udevmon.service
 
-cd ~/Repos/iamharshdabas/linux/hyde || exit
-
-ls --tree
-
 echo '-------------------------'
 echo "Please update hyde config"
 echo '-------------------------'
+
+exit
+
+rm .local/share/waybar/layouts/hyprdots/17.jsonc .config/hyde/config.toml .config/hypr/keybindings.conf
+ln -s ~/Repos/iamharshdabas/linux/hyde/17.jsonc ~/.local/share/waybar/layouts/hyprdots/17.jsonc
+ln -s ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
+ln -s ~/Repos/iamharshdabas/linux/hyde/keybindings.conf ~/.config/hypr/keybindings.conf

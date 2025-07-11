@@ -17,6 +17,7 @@ sudo pacman -S \
   less \
   npm \
   telegram-desktop \
+  unrar \
   unzip
 
 # Install AUR packages
@@ -48,18 +49,11 @@ git config --global pull.rebase true
 ## Create symlink for nvim configuration
 ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 
+## Create symlink for HyDE configuration
+rm .config/hyde/config.toml
+ln -s ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
+
 ## Setup caps2esc
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
 sudo systemctl enable --now udevmon.service
-
-echo '-------------------------'
-echo "Please update hyde config"
-echo '-------------------------'
-
-exit
-
-rm .local/share/waybar/layouts/hyprdots/17.jsonc .config/hyde/config.toml .config/hypr/keybindings.conf
-ln -s ~/Repos/iamharshdabas/linux/hyde/17.jsonc ~/.local/share/waybar/layouts/hyprdots/17.jsonc
-ln -s ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
-ln -s ~/Repos/iamharshdabas/linux/hyde/keybindings.conf ~/.config/hypr/keybindings.conf

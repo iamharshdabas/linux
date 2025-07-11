@@ -6,6 +6,6 @@
 
 hyprland.browser = "zen-browser"
 hyprland.editor = "kitty"
-hyprland.terminal = "zen-browser"
+hyprland.terminal = "kitty"
 
 weather.location = "New Delhi"

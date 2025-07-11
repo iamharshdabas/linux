@@ -49,11 +49,11 @@ git config --global pull.rebase true
 ## Create symlink for nvim configuration
 ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 
-## Create symlink for HyDE configuration
-rm .config/hyde/config.toml
-ln -s ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
+## HyDE configuration
+rm ~/.config/hyde/config.toml
+cp ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
 
 ## Setup caps2esc
-sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
-sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
+sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
+sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
 sudo systemctl enable --now udevmon.service

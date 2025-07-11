@@ -6,11 +6,12 @@ cd ~ || exit
 yay
 
 # Install necessary packages
-sudo pacman -S --needed \
+pacman -S \
   easyeffects \
   fd \
   fzf \
   github-cli \
+  go \
   interception-caps2esc \
   lazygit \
   less \
@@ -19,7 +20,7 @@ sudo pacman -S --needed \
   unzip
 
 # Install AUR packages
-yay -S --needed ani-cli bun-bin zen-browser-bin
+yay -S ani-cli bun-bin zen-browser-bin
 
 # Git configuration
 
@@ -27,7 +28,7 @@ yay -S --needed ani-cli bun-bin zen-browser-bin
 gh auth login
 
 ## Refresh GitHub CLI token for octo.nvim
-gh auth refresh -s read:project
+# gh auth refresh -s read:project
 
 ## Clone all repositories from GitHub user
 mkdir -p Repos/iamharshdabas
@@ -47,7 +48,18 @@ git config --global pull.rebase true
 ## Create symlink for nvim configuration
 ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 
+rm ~/.config/hyde/config.toml
+cp -r ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/
+
 ## Setup caps2esc
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
 sudo cp Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
 sudo systemctl enable --now udevmon.service
+
+cd ~/Repos/iamharshdabas/linux/hyde || exit
+
+ls --tree
+
+echo '-------------------------'
+echo "Please update hyde config"
+echo '-------------------------'

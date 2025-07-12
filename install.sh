@@ -53,6 +53,10 @@ ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
 rm ~/.config/hyde/config.toml
 cp ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
 
+## Waybar configuration
+ln -s ~/Repos/iamharshdabas/linux/waybar/custom.jsonc ~/.config/waybar/layouts/custom.jsonc
+hyde-shell waybar --set custom 
+
 ## Setup caps2esc
 sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
 sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/

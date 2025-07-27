@@ -1,63 +1,51 @@
 {
-  "layer": "top",
-  "output": ["*"],
-  "exclusive": true,
-  "passthrough": false,
-  "reload_style_on_change": true,
-  "include": [ "$XDG_CONFIG_HOME/waybar/modules/*json*", "$XDG_DATA_HOME/waybar/modules/*json*" ],
-  // ? Groups per side
-  "modules-left": [
-    "group/pill#1",
-    "group/pill#2"
-  ],
-  "modules-center": [
-    "group/pill#3"
-  ],
-  "modules-right": [
-    "group/pill#4",
-    "group/pill#5"
-  ],
-  //  ? Declaring the groups
-  "group/pill#1": {
-    "orientation": "inherit",
-    "modules": [
-      "clock",
-      "custom/weather",
-      "custom/spotify"
-    ]
-  },
-  "group/pill#2": {
-    "orientation": "inherit",
-    "modules": [
-      "tray"
-    ]
-  },
-  "group/pill#3": {
-    "orientation": "inherit",
-    "modules": ["hyprland/workspaces"]
-  },
-  "group/pill#4": {
-    "orientation": "inherit",
-    "modules": [
-      "idle_inhibitor",
-      "custom/dunst",
-      "power-profiles-daemon",
-      "custom/workflows",
-      "custom/power"
-    ]
-  },
-  "group/pill#5": {
-    "orientation": "inherit",
-    "modules": [
-      "privacy",
-      "backlight",
-      "pulseaudio",
-      "network",
-      "battery",
-      "custom/gpuinfo",
-      "custom/cpuinfo",
-      "cpu",
-      "memory"
-    ]
-  }
+	"layer": "top",
+	"output": ["*"],
+	"exclusive": true,
+	"passthrough": false,
+	"reload_style_on_change": true,
+	"include": [
+		"$XDG_CONFIG_HOME/waybar/modules/*json*",
+		"$XDG_DATA_HOME/waybar/modules/*json*"
+	],
+	"modules-left": ["group/pill#1", "group/pill#2"],
+	"modules-center": ["group/pill#3"],
+	"modules-right": ["group/pill#4", "group/pill#5"],
+	"group/pill#1": {
+		"orientation": "inherit",
+		"modules": ["clock", "custom/spotify"]
+	},
+	"group/pill#2": {
+		"orientation": "inherit",
+		"modules": ["tray"]
+	},
+	"group/pill#3": {
+		"orientation": "inherit",
+		"modules": ["hyprland/workspaces"]
+	},
+	"group/pill#4": {
+		"orientation": "inherit",
+		"modules": [
+			"custom/cliphist",
+			"idle_inhibitor",
+			"custom/dunst",
+			"power-profiles-daemon",
+			"custom/workflows",
+			"custom/power"
+		]
+	},
+	"group/pill#5": {
+		"orientation": "inherit",
+		"modules": [
+			"privacy",
+			"backlight",
+			"pulseaudio",
+			"network",
+			"battery",
+			"custom/gpuinfo",
+			"custom/cpuinfo",
+			"cpu",
+			"memory"
+		]
+	}
 }

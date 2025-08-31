@@ -7,18 +7,14 @@ yay
 
 # Install necessary packages
 sudo pacman -S \
-  easyeffects \
   fd \
-  fzf \
   github-cli \
   go \
   interception-caps2esc \
   lazygit \
   less \
   npm \
-  telegram-desktop \
-  unrar \
-  unzip
+  unrar
 
 # Install AUR packages
 yay -S ani-cli bun-bin zen-browser-bin
@@ -55,7 +51,7 @@ cp ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
 
 ## Waybar configuration
 ln -s ~/Repos/iamharshdabas/linux/waybar/custom.jsonc ~/.config/waybar/layouts/custom.jsonc
-hyde-shell waybar --set custom 
+hyde-shell waybar --set custom
 
 ## Setup caps2esc
 sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/

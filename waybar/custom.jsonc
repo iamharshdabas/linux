@@ -5,15 +5,15 @@
 	"passthrough": false,
 	"reload_style_on_change": true,
 	"include": [
-		"$XDG_CONFIG_HOME/waybar/modules/*json*",
-		"$XDG_CONFIG_HOME/waybar/modules/*json*"
+    "$XDG_CONFIG_HOME/waybar/modules/*json*",
+    "$XDG_CONFIG_HOME/waybar/includes/includes.json"
 	],
 	"modules-left": ["group/pill#1", "group/pill#2"],
 	"modules-center": ["group/pill#3"],
 	"modules-right": ["group/pill#4", "group/pill#5"],
 	"group/pill#1": {
 		"orientation": "inherit",
-		"modules": ["clock", "custom/spotify"]
+		"modules": ["clock", "custom/weather"]
 	},
 	"group/pill#2": {
 		"orientation": "inherit",

@@ -5,7 +5,5 @@
 "$schema" = "https://raw.githubusercontent.com/HyDE-Project/HyDE/refs/heads/master/Configs/.local/share/hyde/schema/config.toml.json"
 
 hyprland.browser = "zen-browser"
-hyprland.editor = "kitty"
-hyprland.terminal = "kitty"
-
+hyprland.editor = "neovide"
 weather.location = "New Delhi"

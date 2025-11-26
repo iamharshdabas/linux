@@ -13,8 +13,11 @@ sudo pacman -S \
   interception-caps2esc \
   lazygit \
   less \
+  neovide \
   npm \
-  unrar
+  unrar \
+  tokei \
+  yazi
 
 # Install AUR packages
 yay -S ani-cli bun-bin zen-browser-bin

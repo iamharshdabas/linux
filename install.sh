@@ -7,17 +7,18 @@ yay
 
 # Install necessary packages
 sudo pacman -S \
-  fd \
-  github-cli \
-  go \
-  interception-caps2esc \
-  lazygit \
-  less \
-  neovide \
-  npm \
-  unrar \
-  tokei \
-  yazi
+	fd \
+	github-cli \
+	go \
+	interception-caps2esc \
+	keyd \
+	lazygit \
+	less \
+	neovide \
+	npm \
+	unrar \
+	tokei \
+	yazi
 
 # Install AUR packages
 yay -S ani-cli bun-bin zen-browser-bin
@@ -56,7 +57,7 @@ cp ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
 ln -s ~/Repos/iamharshdabas/linux/waybar/custom.jsonc ~/.config/waybar/layouts/custom.jsonc
 hyde-shell waybar --set custom
 
-## Setup caps2esc
-sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.yaml /etc/
-sudo cp ~/Repos/iamharshdabas/linux/caps2esc/udevmon.service /etc/systemd/system/
-sudo systemctl enable --now udevmon.service
+## Setup keyd
+sudo systemctl enable keyd --now
+sudo mv ~/Repos/iamharshdabas/linux/keyd/default.conf /etc/keyd
+sudo keyd reload

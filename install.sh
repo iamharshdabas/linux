@@ -7,18 +7,18 @@ yay
 
 # Install necessary packages
 sudo pacman -S \
-	fd \
-	github-cli \
-	go \
-	interception-caps2esc \
-	keyd \
-	lazygit \
-	less \
-	neovide \
-	npm \
-	unrar \
-	tokei \
-	yazi
+  fd \
+  github-cli \
+  go \
+  interception-caps2esc \
+  keyd \
+  lazygit \
+  less \
+  neovide \
+  npm \
+  unrar \
+  tokei \
+  yazi
 
 # Install AUR packages
 yay -S ani-cli bun-bin zen-browser-bin
@@ -59,5 +59,6 @@ hyde-shell waybar --set custom
 
 ## Setup keyd
 sudo systemctl enable keyd --now
-sudo mv ~/Repos/iamharshdabas/linux/keyd/default.conf /etc/keyd
+sudo mkdir /etc/keyd
+sudo cp ~/Repos/iamharshdabas/linux/keyd/default.conf /etc/keyd
 sudo keyd reload

@@ -47,7 +47,7 @@ git config --global pull.rebase true
 # Setup configuration files
 
 ## Create symlink for nvim configuration
-ln -s ~/Repos/iamharshdabas/nvim/ ~/.config/nvim
+ln -s ~/Repos/iamharshdabas/linux/nvim/ ~/.config/nvim
 
 ## HyDE configuration
 rm ~/.config/hyde/config.toml

@@ -19,7 +19,7 @@ local function get_hyde_font()
       -- remove quotes from font and size
       font = font:gsub('"', "")
       size = size:gsub('"', "")
-      size = 14
+      size = 12
       return font .. ":h" .. size
     end
   end

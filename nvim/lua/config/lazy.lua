@@ -14,6 +14,11 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
+  dev = {
+    path = vim.fn.expand("~/Repos/iamharshdabas"),
+    patterns = {},
+    fallback = false,
+  },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true },
   performance = {

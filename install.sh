@@ -7,6 +7,7 @@ yay
 
 # Install necessary packages
 sudo pacman -S \
+  bun \
   fd \
   github-cli \
   go \
@@ -21,7 +22,7 @@ sudo pacman -S \
   yazi
 
 # Install AUR packages
-yay -S ani-cli bun-bin zen-browser-bin
+yay -S ani-cli zen-browser-bin
 
 # Git configuration
 

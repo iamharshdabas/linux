@@ -2,35 +2,22 @@
 
 cd ~ || exit
 
-# Update system
-yay
-
 # Install necessary packages
 sudo pacman -S \
   bun \
-  fd \
   github-cli \
   go \
-  interception-caps2esc \
   keyd \
   lazygit \
-  less \
   neovide \
   npm \
-  unrar \
   tokei \
   yazi
-
-# Install AUR packages
-yay -S ani-cli zen-browser-bin
 
 # Git configuration
 
 ## Authenticate GitHub CLI
 gh auth login
-
-## Refresh GitHub CLI token for octo.nvim
-# gh auth refresh -s read:project
 
 ## Clone all repositories from GitHub user
 mkdir -p Repos/iamharshdabas
@@ -47,16 +34,8 @@ git config --global pull.rebase true
 
 # Setup configuration files
 
-## Create symlink for nvim configuration
+## Setup nvim
 ln -s ~/Repos/iamharshdabas/linux/nvim/ ~/.config/nvim
-
-## HyDE configuration
-rm ~/.config/hyde/config.toml
-cp ~/Repos/iamharshdabas/linux/hyde/config.toml ~/.config/hyde/config.toml
-
-## Waybar configuration
-ln -s ~/Repos/iamharshdabas/linux/waybar/custom.jsonc ~/.config/waybar/layouts/custom.jsonc
-hyde-shell waybar --set custom
 
 ## Setup keyd
 sudo systemctl enable keyd --now
